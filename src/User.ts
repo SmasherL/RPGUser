@@ -79,7 +79,7 @@ class User{
 
     currentExp = 0;
 
-    level = 0;
+    level = 1;
 
     fightPowerCache = null;
 
@@ -134,7 +134,7 @@ class Hero{
 
     private baseAttack = 0;
 
-    private  level = 0;
+    private  level = 1;
 
     private  value = 0;
 
@@ -181,7 +181,7 @@ class Hero{
 
         var result = 0;
         this.equipments.forEach(e => result += e.fightPower);
-        return result + (this.hp * 300 + this.attack * 500) * 0.5;
+        return result + (this.hp * 30 + this.attack * 40) * 0.5;
 
     }
 
@@ -252,7 +252,7 @@ class Equipment{
 
         var result = 0;
         this.jewels.forEach(e => result += e.fightPower);       
-        return result + (this.hpBoost * 40 + this.attackBoost * 50)/2;
+        return result + (this.hpBoost * 30 + this.attackBoost * 40)/2;
 
     }
 
@@ -304,7 +304,7 @@ class Jewel{
     
     get fightPower(){
 
-        return (this.hpBoost * 40 + this.attackBoost * 50)/this.level;
+        return (this.hpBoost * 30 + this.attackBoost * 40)/this.level;
     }
 
     public show(){
